@@ -28,6 +28,8 @@ public class TigaLoop {
             k++;
         } while (k <= n);
         System.out.println();
+
+
         int kurang = 0;
         for (int i = 1; i < n; i++){
             kurang++;
@@ -38,6 +40,7 @@ public class TigaLoop {
         }
         System.out.println("i < n berputar : " + kurang + " kali");
         System.out.println("i <= n berputar : " + kurangSama + " kali");
+
         System.out.print("Disaring : ");
         int hitungPrintln = 0;
         for (int i = 1; i <= 10; i++){
@@ -48,6 +51,11 @@ public class TigaLoop {
         }
         System.out.println();
         System.out.println("Sampai println : " + hitungPrintln + " kali");
+        //Kenapa tidak berhenti di i = 8?! Karena Di dalam loop (i % 2 == 0) Continue.
+        //Angka 8 adalah genap, sehingga kondisi (i % 2 == 0) True. PERINTAH "CONTINUE' MEMAKSA PROGRAM MELOMPATI SISA KODE DI BAWAHNYA.
+        //if (i > 7)break, DI LOMPATI oleh continue dan lanjut ke iterasi berikutnys tanpa menjalankan baris setelahnya.sehingga break untuk i = 8 tidak pernah di evaluasi.
+       //Itulah mengapa if (i > 7) break; tidak pernah di eksekusi i = 8, karena sudah di lewati oleh continue. Jadi loop tidak berhenti di 8, melainkan di 7 (pada saat i>7 terpenuhi maka   break di jalankan.
+        // break akan memeriksa angka 9. apakah 9 >7 jawabannya True. maka break dieksekusi.
         System.out.print("\nBatas deter (n) : ");
         int n2 = input.nextInt();
 
