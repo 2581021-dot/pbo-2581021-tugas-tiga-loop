@@ -8,12 +8,14 @@ public class TigaLoop {
         int n = input.nextInt();
 
         System.out.println("===== SATU DERET, TIGA LOOP =====");
+        // Jika n = 0, maka i = 1 tidak <= 0 → loop tidak jalan → output kosong.
         System.out.print("For     :");
         for (int i = 1; i <= n; i++) {
             System.out.print(i + " ");
         }
         System.out.println();
-
+        // WHILE LOOP: sama, kondisi dicek di depan.
+        // Jika n = 0, maka j = 1 tidak <= 0 → loop tidak jalan → output kosong.
         System.out.print("While     : ");
         int j = 1;
         while (j <= n) {
@@ -21,6 +23,8 @@ public class TigaLoop {
             j++;
         }
         System.out.println();
+        // DO-WHILE LOOP: badan loop dijalankan dulu sekali, baru kondisi dicek.
+        // Jadi meskipun n = 0, angka 1 tetap dicetak sekali.
         System.out.print("do-while : ");
         int k = 1;
         do {
